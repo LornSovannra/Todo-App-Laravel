@@ -16,8 +16,11 @@ aside{
 }
 
 section{
-    background: #555b6e;
-    padding: 10px;
+    background: #474745;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .profile_template{
@@ -68,7 +71,7 @@ section{
 .fa-user-circle{
     color: white;
     font-size: 50px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .fa-sun,
@@ -105,4 +108,128 @@ section{
 
 .fa-home{
     color: #669bbc;
+}
+
+.category_title{
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #0081a7;
+}
+
+.todo_wrapper{
+    display: flex;
+    align-items: center;
+    background: #212529;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.todo_wrapper input{
+    margin-right: 10px;
+}
+
+.todo_wrapper p{
+    font-size: 18px;
+    color: white;
+}
+
+.todos{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.todo input{
+    width: 100%;
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.fa-plus{
+    color: #0081a7;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.fa-plus:hover{
+    opacity: .50;
+}
+
+.edit_modal_wrapper{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 400px;
+    background: #212529;
+    border-left: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.edit_modal{
+    margin: 20px;
+}
+
+.description_block input{
+    width: 100%;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    padding: 20px 10px;
+}
+
+.button_block{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button_block a, .button_block input{
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.button_block input:nth-child(3){
+    background: green;
+    cursor: pointer;
+}
+
+.button_block a:nth-child(4){
+    background: red;
+}
+
+.created_date{
+    border-top: 1px solid gray;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.created_date p{
+    color: white;
+}
+
+#delete_button{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
 }

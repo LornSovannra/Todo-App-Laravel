@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do App</title>
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="../css/home.css">
     <script src="https://kit.fontawesome.com/d58652f74d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -81,6 +81,28 @@
             </div>
         </div>
     </section>
+
+    <div class="edit_modal_wrapper">
+        <div class="edit_modal">
+            <form action="{{ route("update-my-day", $exact_my_day->id) }}" method="POST">
+                <div class="description_block">
+                    <input type="text" value="{{ $exact_my_day->description }}" name="description">
+                </div>
+                <div class="button_block">
+                    @method("PUT")
+                    @csrf
+                    <input type="submit" value="Update">
+                    <a href="/">Close</a>
+                </div>
+            </form>
+        </div>
+        <div class="created_date">
+            <p>Create on {{ $exact_my_day -> created_at }}</p>
+            <form action="{{ route("delete-my-day", $exact_my_day->id) }}" method="GET">
+                <button class="show_confirm" id="delete_button" type="submit" style="background: none; border: none; cursor: pointer;"><i class="fas fa-trash-alt" style="color: tomato; font-size: 18px;"></i></button>
+            </form>
+        </div>
+    </div>
 
     <script type="text/javascript">
         $('.show_confirm').click(function(e) {
