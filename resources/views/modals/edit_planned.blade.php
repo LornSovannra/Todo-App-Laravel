@@ -13,7 +13,7 @@
     @include('layouts.navigation')
     <section>
         <div>
-            <h1 class="category_title"><i class="fas fa-sun"></i> My Day</h1>
+            <h1 class="category_title"><i class="fas fa-sun"></i> Planned</h1>
             @if (count($planneds) > 0)    
                 @foreach ($planneds as $planned)
                     <div class="todo_wrapper">
